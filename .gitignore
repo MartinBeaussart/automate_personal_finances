@@ -1,6 +1,7 @@
 src/__pycache__/*
 .vscode/launch.json
-data/*
+*.csv
+*.parquet
 runs/*
 checkpoints/*
 src/classification_model/__pycache__/*
