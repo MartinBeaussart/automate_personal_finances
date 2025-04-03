@@ -1,0 +1,10 @@
+torch
+numpy
+polars
+transformers
+PyYAML
+tables
+torchvision
+tensorboard
+scikit-learn
+pandas

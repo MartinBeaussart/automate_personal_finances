@@ -1,0 +1,28 @@
+run_pipelines: ['create_dataset', 'train_model', 'process_new_transactions'] # ['create_dataset', 'train_model']
+
+# Create dataset
+use_synthetic_data: True
+
+# Model
+resume: False
+load_best: True
+id_config: 1
+name: 'experiment'
+seed: 0
+
+batch_size: 64
+num_workers: 1
+model: 'default'
+loss: 'BCELLOG'
+loss_pos_weight: 1.0
+optimizer: 'Adam'
+optimizer_params: {'lr': 0.02}
+epochs: 50
+metrics: ["accuracy", "precision", 'recall', 'f1']
+metric_best_model: 'f1'
+
+train_file: "./data/clean_data/train.parquet"
+test_file: "./data/clean_data/test.parquet"
+
+validation_size: 0 # TODO
+scheduler: 'CosineAnnealingLR' # TODO
